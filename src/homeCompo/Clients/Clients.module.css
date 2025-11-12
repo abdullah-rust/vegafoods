@@ -1,0 +1,158 @@
+/* Clients Section */
+.clients {
+  padding: 4rem 0;
+  background: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.clientLogo {
+  padding: 1.5rem;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+}
+
+.clientLogo:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.logoImage {
+  max-width: 120px;
+  max-height: 50px;
+  width: auto;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.clientLogo:hover .logoImage {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .clientsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .clientLogo {
+    height: 90px;
+    padding: 1.2rem;
+  }
+
+  .logoImage {
+    max-width: 100px;
+    max-height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clients {
+    padding: 3rem 0;
+  }
+
+  .clientsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .clientLogo {
+    height: 80px;
+    padding: 1rem;
+  }
+
+  .logoImage {
+    max-width: 90px;
+    max-height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clientsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .clientLogo {
+    height: 70px;
+    padding: 0.8rem;
+  }
+
+  .logoImage {
+    max-width: 80px;
+    max-height: 35px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .clientsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .clientLogo {
+    height: 65px;
+    padding: 0.8rem;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .logoImage {
+    max-width: 70px;
+    max-height: 30px;
+  }
+}
+
+/* Animation for logos */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.clientLogo {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.clientLogo:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.clientLogo:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.clientLogo:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.clientLogo:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.clientLogo:nth-child(5) {
+  animation-delay: 0.5s;
+}

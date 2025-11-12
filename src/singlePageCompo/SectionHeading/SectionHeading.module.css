@@ -1,0 +1,35 @@
+.headingContainer {
+  text-align: center;
+  padding: 60px 15px 30px 15px; /* Upar zyada space jaisa image mein hai */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subTitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #79a34f; /* Green color */
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+}
+
+.mainTitle {
+  font-size: 40px;
+  font-weight: 800;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 30px;
+  }
+}

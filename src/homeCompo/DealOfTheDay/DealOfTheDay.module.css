@@ -1,0 +1,324 @@
+/* Deal of the Day Section */
+.dealOfTheDay {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.dealContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Image Section */
+.imageSection {
+  position: relative;
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.productImage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageContainer:hover .productImage {
+  transform: scale(1.05);
+}
+
+.discountBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: var(--text-white);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 15px rgba(130, 174, 70, 0.4);
+}
+
+.discountText {
+  display: block;
+  transform: rotate(2deg);
+}
+
+/* Content Section */
+.contentSection {
+  padding: 0 1rem;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.smallTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.mainTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Product Info */
+.productInfo {
+  margin-bottom: 2.5rem;
+}
+
+.productName {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.priceSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.oldPrice {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.newPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Countdown Timer */
+.countdown {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.countdownItem {
+  background: var(--bg-white);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.countdownItem:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.countdownNumber {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+  font-family: "Courier New", monospace;
+}
+
+.countdownLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Shop Button */
+.shopButton {
+  font-size: 1.1rem;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(130, 174, 70, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.shopButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.shopButton:hover::before {
+  left: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dealContent {
+    gap: 3rem;
+  }
+
+  .mainTitle {
+    font-size: 2.4rem;
+  }
+
+  .productImage {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dealOfTheDay {
+    padding: 3rem 0;
+  }
+
+  .dealContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .productImage {
+    height: 350px;
+  }
+
+  .countdown {
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .countdownItem {
+    min-width: 70px;
+    padding: 0.8rem;
+  }
+
+  .countdownNumber {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .productName {
+    font-size: 1.5rem;
+  }
+
+  .countdown {
+    gap: 0.5rem;
+  }
+
+  .countdownItem {
+    min-width: 60px;
+    padding: 0.6rem;
+  }
+
+  .countdownNumber {
+    font-size: 1.3rem;
+  }
+
+  .countdownLabel {
+    font-size: 0.7rem;
+  }
+
+  .priceSection {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .shopButton {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+/* Background Pattern */
+.dealOfTheDay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(130, 174, 70, 0.1) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: 1;
+}
+
+.dealOfTheDay::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle,
+    rgba(130, 174, 70, 0.05) 0%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  z-index: 1;
+}
+
+.imageSection,
+.contentSection {
+  position: relative;
+  z-index: 2;
+}

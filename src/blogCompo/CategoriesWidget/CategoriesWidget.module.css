@@ -1,0 +1,53 @@
+.widgetContainer {
+  margin-bottom: 40px;
+}
+
+.widgetTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.categoryList {
+  list-style: none; /* Default list dots hataye */
+  padding: 0;
+  margin: 0;
+}
+
+.categoryItem {
+  display: flex;
+  justify-content: space-between; /* Name left par, Count right par */
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee; /* Bottom line jaisa image mein hai */
+}
+
+.categoryItem:last-child {
+  border-bottom: none; /* Akhri item se line hatayi */
+}
+
+.categoryLink {
+  text-decoration: none;
+  color: #555;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.categoryCount {
+  color: #aaa; /* Halka grey jaisa image mein hai */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.categoryLink:hover {
+  color: #79a34f; /* Hover par Green color jaisa design mein hai */
+}
+
+/* Responsive adjustments for smaller titles on mobile */
+@media (max-width: 768px) {
+  .widgetTitle {
+    font-size: 20px;
+  }
+}

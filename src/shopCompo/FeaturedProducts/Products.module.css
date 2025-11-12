@@ -1,0 +1,305 @@
+/* Featured Products Section */
+.featuredProducts {
+  padding: 3rem 0;
+  background: #f8faf7;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #79a34f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.8rem;
+}
+
+.sectionDescription {
+  font-size: 0.85rem;
+  color: #666;
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Products Grid - Mobile First */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Mobile par 2 cards */
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.productCard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e8f0fe;
+}
+
+.productCard:hover {
+  box-shadow: 0 4px 12px rgba(121, 163, 79, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Product Image - Chota size */
+.productImage {
+  position: relative;
+  height: 140px; /* Chota height */
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover .image {
+  transform: scale(1.05);
+}
+
+/* Badges - Chote badges */
+.badges {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 8px;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.newBadge {
+  background: #3498db;
+  color: white;
+}
+
+.saleBadge {
+  background: #e74c3c;
+  color: white;
+}
+
+.categoryBadge {
+  background: rgba(255, 255, 255, 0.9);
+  color: #79a34f;
+  font-size: 0.55rem;
+}
+
+/* Hover Overlay - Simple */
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(121, 163, 79, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.productCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 6px;
+}
+
+.actionBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.8rem;
+}
+
+.actionBtn:hover {
+  background: white;
+  color: #79a34f;
+}
+
+.actionBtn.inWishlist {
+  background: #e74c3c;
+  color: white;
+}
+
+/* Product Info - Compact */
+.productInfo {
+  padding: 0.8rem;
+}
+
+.productName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* Rating - Compact */
+.ratingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.star {
+  font-size: 0.7rem;
+  color: #ddd;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.ratingValue {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-left: 3px;
+}
+
+.reviews {
+  font-size: 0.65rem;
+  color: #666;
+}
+
+/* Price - Compact */
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.currentPrice {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #79a34f;
+}
+
+.originalPrice {
+  font-size: 0.8rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* Add to Cart Button - Compact */
+.addToCartBtn {
+  width: 100%;
+  background: #79a34f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.addToCartBtn:hover {
+  background: #678e40;
+}
+
+.cartIcon {
+  font-size: 0.7rem;
+}
+
+/* Tablet - 3 cards */
+@media (min-width: 768px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    max-width: 900px;
+  }
+
+  .productImage {
+    height: 160px;
+  }
+
+  .productInfo {
+    padding: 1rem;
+  }
+
+  .productName {
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop - 4 cards */
+@media (min-width: 1024px) {
+  .productsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+  }
+
+  .productImage {
+    height: 180px;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.8rem;
+  }
+
+  .sectionDescription {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large Desktop - 4 cards with slightly bigger size */
+@media (min-width: 1200px) {
+  .productsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .productImage {
+    height: 200px;
+  }
+}

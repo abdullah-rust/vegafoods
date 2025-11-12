@@ -1,0 +1,47 @@
+/* -------------------------------------- */
+/* 1. BlogLayout: Desktop (Default) */
+/* -------------------------------------- */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.layout {
+  display: flex;
+}
+
+.mainContent {
+  /* Left side (Blog Posts) */
+  flex: 2;
+  padding-right: 30px;
+}
+
+.sidebar {
+  /* Right side (Widgets) */
+  flex: 1;
+  padding-left: 30px;
+  border-left: 1px solid #eee;
+}
+
+/* -------------------------------------- */
+/* 2. BlogLayout: Mobile/Tablet Responsiveness */
+/* -------------------------------------- */
+@media (max-width: 992px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    flex: auto;
+    padding-right: 0;
+  }
+
+  .sidebar {
+    flex: auto;
+    padding-left: 0;
+    padding-top: 30px;
+    border-left: none;
+    border-top: 1px solid #eee;
+  }
+}

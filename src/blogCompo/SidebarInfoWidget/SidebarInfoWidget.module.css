@@ -1,0 +1,62 @@
+.widgetContainer {
+  /* Main container ko margin ki zaroorat nahi kyunki sections handle karein ge */
+}
+
+.widgetTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* -------------------------------------- */
+/* Tag Cloud Styling */
+/* -------------------------------------- */
+.tagCloudSection {
+  margin-bottom: 40px;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap; /* Tags ko agle line par wrap karne ke liye */
+  gap: 10px; /* Tags ke beech ka fasla */
+}
+
+.tagButton {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  color: #555;
+  font-size: 13px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  background-color: white;
+}
+
+.tagButton:hover {
+  color: #fff;
+  background-color: #79a34f; /* Green color jaisa Vegefords design mein hai */
+  border-color: #79a34f;
+}
+
+/* -------------------------------------- */
+/* Paragraph Styling */
+/* -------------------------------------- */
+.paragraphSection {
+  /* Niche koi aur content nahi hai, isliye margin kam rakha */
+  margin-bottom: 20px;
+}
+
+.paragraphContent {
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .widgetTitle {
+    font-size: 20px;
+  }
+}

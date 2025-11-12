@@ -1,0 +1,272 @@
+/* Categories Section */
+.categories {
+  padding: 5rem 0;
+  background: var(--bg-light);
+}
+
+.categoriesLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Featured Category */
+.featuredCategory {
+  height: 100%;
+}
+
+.featuredImage {
+  position: relative;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.featuredOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.featuredContent {
+  position: relative;
+  z-index: 2;
+  padding: 3rem;
+  width: 100%;
+}
+
+.featuredTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.featuredSubtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.shopButton {
+  font-size: 1rem;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(130, 174, 70, 0.4);
+}
+
+/* Category Grid */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  height: fit-content;
+}
+
+.categoryCard {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 280px;
+}
+
+.categoryCard:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.categoryImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.categoryOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.categoryCard:hover .categoryOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(130, 174, 70, 0.8) 0%,
+    rgba(130, 174, 70, 0.4) 50%,
+    rgba(130, 174, 70, 0.2) 100%
+  );
+}
+
+.categoryContent {
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.categoryName {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.categoryLink {
+  color: var(--text-white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.categoryLink:hover {
+  opacity: 1;
+  gap: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .categoriesLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .featuredImage {
+    height: 500px;
+  }
+
+  .featuredTitle {
+    font-size: 2.2rem;
+  }
+
+  .categoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .categories {
+    padding: 3rem 0;
+  }
+
+  .featuredImage {
+    height: 400px;
+  }
+
+  .featuredContent {
+    padding: 2rem;
+  }
+
+  .featuredTitle {
+    font-size: 1.8rem;
+  }
+
+  .featuredSubtitle {
+    font-size: 1rem;
+  }
+
+  .categoryGrid {
+    gap: 1rem;
+  }
+
+  .categoryCard {
+    height: 250px;
+  }
+
+  .categoryContent {
+    padding: 1.2rem;
+  }
+
+  .categoryName {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .featuredImage {
+    height: 350px;
+  }
+
+  .featuredContent {
+    padding: 1.5rem;
+  }
+
+  .featuredTitle {
+    font-size: 1.5rem;
+  }
+
+  .featuredSubtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .categoryCard {
+    height: 200px;
+  }
+
+  .categoryName {
+    font-size: 1.1rem;
+  }
+
+  .categoryLink {
+    font-size: 0.85rem;
+  }
+}
+
+/* Animation for image zoom on hover */
+.categoryImage {
+  transition: transform 0.5s ease;
+}
+
+.categoryCard:hover .categoryImage {
+  transform: scale(1.05);
+}
+
+.featuredImage {
+  transition: transform 0.5s ease;
+}
+
+.featuredCategory:hover .featuredImage {
+  transform: scale(1.02);
+}

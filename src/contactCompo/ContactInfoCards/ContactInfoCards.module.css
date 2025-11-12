@@ -1,0 +1,45 @@
+.cardsSection {
+  display: flex;
+  flex-wrap: wrap; /* Agar screen choti ho to cards agle line par aayen */
+  margin: 40px auto;
+  max-width: 1200px; /* Layout ki max width */
+  padding: 0 15px;
+  gap: 20px; /* Cards ke beech ka fasla */
+}
+
+.infoCard {
+  /* Har card ko 4 cards in one row ke liye 25% width se thoda kam */
+  flex: 1 1 calc(25% - 20px);
+  background: #f7f7f7; /* Halka grey background jaisa design mein hai */
+  padding: 25px;
+  min-width: 200px; /* Small screens par chota hone se roka */
+}
+
+.cardTitle {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  margin: 0 0 5px 0;
+}
+
+.cardDetail {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .infoCard {
+    /* Tablet par 2 cards in a row */
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .infoCard {
+    /* Mobile par 1 card in a row */
+    flex: 1 1 100%;
+  }
+}

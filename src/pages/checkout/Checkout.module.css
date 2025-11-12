@@ -1,0 +1,28 @@
+.checkoutPage {
+  padding: 60px 0;
+}
+
+.checkoutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  gap: 30px; /* Columns ke beech ka fasla */
+}
+
+/* Columns ka size set kiya: Billing 60% aur Summary 40% */
+.checkoutContainer > :nth-child(1) {
+  flex: 2;
+  min-width: 50%; /* Tablet par minimum size maintain kiya */
+}
+.checkoutContainer > :nth-child(2) {
+  flex: 1;
+  min-width: 300px; /* Summary ko chota hone se roka */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .checkoutContainer {
+    flex-direction: column; /* Mobile par columns ko stack kiya */
+  }
+}

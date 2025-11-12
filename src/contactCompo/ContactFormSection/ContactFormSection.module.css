@@ -1,0 +1,173 @@
+.formMapSection {
+  display: flex;
+  margin: 0 auto 80px auto;
+  max-width: 1200px;
+  padding: 0 15px;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.mapContainer {
+  flex: 1;
+  min-height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.googleMap {
+  border-radius: 8px;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.googleMap:hover {
+  filter: grayscale(0%);
+}
+
+.formContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inputRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.inputRow .formInput {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.formInput,
+.formMessage {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.formInput:focus,
+.formMessage:focus {
+  border-color: #79a34f;
+  box-shadow: 0 0 0 3px rgba(121, 163, 79, 0.1);
+  transform: translateY(-2px);
+}
+
+.formInput::placeholder,
+.formMessage::placeholder {
+  color: #999;
+}
+
+.formMessage {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.sendButton {
+  background: #79a34f;
+  color: white;
+  border: none;
+  padding: 16px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sendButton:hover {
+  background: #678e40;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(121, 163, 79, 0.3);
+}
+
+.sendButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .formMapSection {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mapContainer {
+    min-height: 400px;
+    order: 2;
+  }
+
+  .formContainer {
+    order: 1;
+  }
+
+  .contactForm {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .formMapSection {
+    margin-bottom: 60px;
+    padding: 0 10px;
+  }
+
+  .mapContainer {
+    min-height: 350px;
+  }
+
+  .inputRow {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .inputRow .formInput {
+    margin-bottom: 20px;
+  }
+
+  .contactForm {
+    padding: 20px;
+  }
+
+  .sendButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .mapContainer {
+    min-height: 300px;
+  }
+
+  .contactForm {
+    padding: 15px;
+  }
+
+  .formInput,
+  .formMessage {
+    padding: 12px;
+    font-size: 14px;
+  }
+}

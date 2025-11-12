@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="HandheldFriendly" content="true" />
+    <title>vegafoods</title>
+
+    <style>
+      body {
+        touch-action: pan-x pan-y;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
+
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      document.addEventListener("keydown", function (e) {
+        if (
+          (e.ctrlKey || e.metaKey) &&
+          (e.key === "+" || e.key === "-" || e.key === "=")
+        ) {
+          e.preventDefault();
+        }
+      });
+
+      document.addEventListener(
+        "wheel",
+        function (e) {
+          if (e.ctrlKey) {
+            e.preventDefault();
+          }
+        },
+        { passive: false }
+      );
+
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+      let lastTouchEnd = 0;
+      document.addEventListener(
+        "touchend",
+        function (event) {
+          const now = new Date().getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

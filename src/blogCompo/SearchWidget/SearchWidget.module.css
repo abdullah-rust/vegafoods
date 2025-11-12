@@ -1,0 +1,39 @@
+.widgetContainer {
+  margin-bottom: 40px;
+}
+
+.searchForm {
+  display: flex;
+  border: 1px solid #ccc; /* Halka border jaisa image mein hai */
+  border-radius: 4px; /* Thoda rounded corners */
+  overflow: hidden;
+}
+
+.searchInput {
+  flex-grow: 1; /* Input field zyada jagah le ga */
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  outline: none; /* Focus hone par blue outline hataya */
+}
+
+.searchInput::placeholder {
+  color: #999;
+}
+
+.searchButton {
+  background-color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.searchIcon {
+  font-size: 18px;
+  color: #79a34f; /* Green color use kiya */
+}
+
+.searchButton:hover {
+  background-color: #f0f0f0;
+}

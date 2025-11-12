@@ -1,0 +1,73 @@
+.billingSection {
+  padding: 20px;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.billingForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.inputHalf,
+.inputFull {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.inputHalf {
+  flex: 1; /* Do inputs ko barabar hissa diya */
+}
+
+.inputFull {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Dropdown ki styling */
+select.inputFull {
+  appearance: none; /* Default browser style hataya */
+  background: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>")
+    no-repeat right 15px center;
+  background-size: 15px;
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.checkboxLabel {
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column; /* Mobile par inputs ko upar-neeche stack kiya */
+    gap: 0;
+  }
+  .inputHalf {
+    margin-bottom: 20px; /* Jab stack hon to margin diya */
+  }
+  .checkboxGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

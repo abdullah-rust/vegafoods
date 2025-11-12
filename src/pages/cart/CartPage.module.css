@@ -1,0 +1,13 @@
+.infoWidgetsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 15px;
+}
+@media (max-width: 992px) {
+  .infoWidgetsContainer {
+    flex-direction: column;
+  }
+}
