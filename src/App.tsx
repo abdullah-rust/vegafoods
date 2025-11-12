@@ -1,24 +1,25 @@
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect, Suspense, lazy } from "react";
 
-// import pages
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Blog from "./pages/blog/Blog";
-import Contact from "./pages/contact/Contact";
-import Cart from "./pages/cart/Cart";
-import Shop from "./pages/shop/Shop";
-import Wishlist from "./pages/wishlist/Wishlist";
-import SinglePage from "./pages/singlePage/SinglePage";
-import Checkout from "./pages/checkout/Checkout";
-import NotFound from "./pages/NotFound/NotFound";
-
-// import Components
+// Components
 import Header from "./components/header/Header";
 import Footer from "./components/Footer/Footer";
-import { useEffect } from "react";
 
-const ScrollToTop = () => {
+// Lazy-loaded pages
+const Home = lazy(() => import("./pages/home/Home"));
+const About = lazy(() => import("./pages/about/About"));
+const Blog = lazy(() => import("./pages/blog/Blog"));
+const Contact = lazy(() => import("./pages/contact/Contact"));
+const Cart = lazy(() => import("./pages/cart/Cart"));
+const Shop = lazy(() => import("./pages/shop/Shop"));
+const Wishlist = lazy(() => import("./pages/wishlist/Wishlist"));
+const SinglePage = lazy(() => import("./pages/singlePage/SinglePage"));
+const Checkout = lazy(() => import("./pages/checkout/Checkout"));
+const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
+
+// ScrollToTop Component
+const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -31,28 +32,29 @@ const ScrollToTop = () => {
 
   return null;
 };
-function App() {
-  const location = useLocation();
 
+const App: React.FC = () => {
   return (
     <>
       <Header />
       <ScrollToTop />
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/single-product" element={<SinglePage />} />
-        <Route path="/check-out" element={<Checkout />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/single-product" element={<SinglePage />} />
+          <Route path="/check-out" element={<Checkout />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
       <Footer />
     </>
   );
-}
+};
 
 export default App;
