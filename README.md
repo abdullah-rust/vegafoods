@@ -1,73 +1,53 @@
-# React + TypeScript + Vite
+# 🥦 VegeFoods - Fresh Organic Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive organic food website built with React, TypeScript, and Vite. VegeFoods offers fresh vegetables, fruits, and organic products directly from farm to your doorstep.
 
-Currently, two official plugins are available:
+![VegeFoods Organic Store](https://img.shields.io/badge/VegeFoods-Organic%20Store-brightgreen)
+![React](https://img.shields.io/badge/React-18.2.0-61dafb)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-3178c6)
+![Vite](https://img.shields.io/badge/Vite-5.0+-646cff)
+![Responsive](https://img.shields.io/badge/Responsive-Yes-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- 🎨 **Modern UI Design** - Clean and fresh organic theme
+- 📱 **Fully Responsive** - Works perfectly on all devices
+- ⚡ **Fast Performance** - Built with Vite for optimal speed
+- 🎯 **Type Safety** - TypeScript for better development experience
+- 🛒 **E-commerce Ready** - Shopping cart and product management
+- 🌱 **Organic Focus** - Fresh farm products showcase
+- 🎪 **Smooth Animations** - Framer Motion for engaging UX
+- 🔍 **Product Search** - Easy product discovery
+- 💝 **Wishlist** - Save favorite products
+- 📦 **Category Filter** - Browse by product type
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+The project is hosted live on **GitHub Pages**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🔗 **Live Website:** [https://abdullah-rust.github.io/vegafoods](https://abdullah-rust.github.io/vegafoods)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Frontend Framework:** React
+- **Language:** TypeScript
+- **Build Tool:** Vite
+- **Styling:** CSS Modules
+- **Animations:** Framer Motion
+- **Icons:** React Icons
+- **Routing:** React Router DOM
+- **Development:** Hot Module Replacement (HMR)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📦 Installation & Setup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/abdullah-rust/vegafoods.git
+   cd vegafoods
+   ```
+2. **run Website**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
+pnpm run dev
 ```
