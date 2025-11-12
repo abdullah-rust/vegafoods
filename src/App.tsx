@@ -7,7 +7,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/Footer/Footer";
 
 // Lazy-loaded pages
-const Home = lazy(() => import("./pages/home/Home"));
+import Home from "./pages/home/Home";
 const About = lazy(() => import("./pages/about/About"));
 const Blog = lazy(() => import("./pages/blog/Blog"));
 const Contact = lazy(() => import("./pages/contact/Contact"));
